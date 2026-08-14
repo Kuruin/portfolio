@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.className} h-full antialiased`}
+      className={`${geistSans.className} h-full antialiased scrollbar-thumb-[#a4a4a4]`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
