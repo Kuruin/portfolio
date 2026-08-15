@@ -1,6 +1,7 @@
 import { Container } from "./components/container";
 import Link from "next/link";
 import { CartoonCV } from "./components/cartoon-cv";
+import { ThemeToggle } from "./components/theme-toggle";
 
 
 const socialLinks = [
@@ -34,6 +35,7 @@ const socialLinks = [
 export default function Home() {
   return (
     <div>
+      <ThemeToggle />
       <Container className="min-h-screen px-6 sm:px-4 py-22 sm:py-32 selection:bg-neutral-800 selection:text-[#f5f5f4]">
         {/* Profile Section */}
         <div className="mb-14 w-fit">
