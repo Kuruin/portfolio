@@ -2,6 +2,7 @@ import { Container } from "./components/container";
 import Link from "next/link";
 import { CartoonCV } from "./components/cartoon-cv";
 
+
 const socialLinks = [
   {
     id: "1",
@@ -35,7 +36,7 @@ export default function Home() {
     <div>
       <Container className="min-h-screen px-6 sm:px-4 py-22 sm:py-32 selection:bg-neutral-800 selection:text-[#f5f5f4]">
         {/* Profile Section */}
-        <div className="mb-14">
+        <div className="mb-14 w-fit">
           <div className="flex items-center gap-4 mb-8">
             <img
               src="/random-girl.png"
@@ -43,22 +44,21 @@ export default function Home() {
               className="rounded-full size-12 object-cover object-top-right"
             />
             <div>
-              <p className="text-xl font-medium text-neutral-900">
+              <p className="text-2xl sm:text-xl font-medium text-neutral-900">
                 Manavjit Singh
               </p>
               <p className="text-sm text-neutral-600">Just a chill guy.</p>
             </div>
-            <CartoonCV className="size-10" />
+            <CartoonCV className="size-10 ml-auto" />
           </div>
-          <p className="mb-8 text-[17px] text-neutral-800">
-            I’m fascinated by the process of turning a rough idea into something
-            that feels inevitable.
+          <p className="mb-8 text-xl sm:text-[17px] leading-[1.55] text-neutral-800">
+            I enjoy taking an idea, figuring things out along the way, and turning it into something real.
           </p>
           <div className="mb-5">
-            <p className="tracking-[0.145em] text-neutral-500 text-[12px] mb-3">
+            <p className="tracking-[0.145em] text-neutral-500 text-md sm:text-[12px] mb-3">
               NOW
             </p>
-            <p className="text-neutral-800 text-[15px]">
+            <p className="text-neutral-800 text-lg sm:text-[15px] leading-[1.75]">
               I’m a final-year CSE student at the{" "}
               <span className="text-[16px] font-medium">
                 University of Mumbai,{" "}
@@ -84,12 +84,12 @@ export default function Home() {
 
         {/* Projects Sections */}
         <div>
-          <h2 className="text-neutral-500 text-[11px] tracking-[0.25em] uppercase mb-5">
+          <h2 className="text-neutral-500 text-[12px] tracking-[0.16em] uppercase mb-4">
             Recent Projects
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4 cursor-pointer">
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
             </a>
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
             </a>
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
@@ -242,7 +242,7 @@ export default function Home() {
               </div>
             </a>
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
@@ -292,7 +292,7 @@ export default function Home() {
               </div>
             </a>
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
@@ -342,7 +342,7 @@ export default function Home() {
               </div>
             </a>
             <a>
-              <div className="h-40 w-65 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
+              <div className="h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-5 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-300">
                 <div className="flex items-center gap-2 relative">
                   <img
                     src={"https://kamran.fyi/projects/roadmap-logo.svg"}
