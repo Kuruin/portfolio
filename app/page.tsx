@@ -101,7 +101,7 @@ export default function Home() {
                   id={`social-link-${items.title.toLowerCase()}`}
                   href={items.link}
                   className={cn(
-                    "text-sm text-neutral-400 underline underline-offset-3 decoration-neutral-200 transition-colors duration-300 hover:text-neutral-900 hover:underline hover:decoration-neutral-900",
+                    "text-sm text-neutral-400 underline underline-offset-3 decoration-neutral-200 transition-all duration-150 ease-out hover:text-neutral-900 hover:underline hover:decoration-neutral-900 active:scale-95",
                     "dark:text-dark-accent dark:hover:text-white dark:hover:decoration-white dark:decoration-dark-accent"
                   )}
                 >
@@ -122,10 +122,13 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '0ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -143,7 +146,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -207,10 +210,13 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '50ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -228,7 +234,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -286,10 +292,13 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '100ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -307,7 +316,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -365,10 +374,13 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '150ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -386,7 +398,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -444,10 +456,13 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '200ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -465,7 +480,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -523,10 +538,13 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div className={cn(
-                "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 transition-colors duration-200",
-                "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
-              )}>
+              <div
+                className={cn(
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                )}
+                style={{ animationDelay: '250ms' }}
+              >
                 <div className="flex items-center gap-2 relative">
                   <img
                     src="/roadmap.svg"
@@ -544,7 +562,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black transition-colors duration-200",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"

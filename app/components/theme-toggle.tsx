@@ -16,7 +16,7 @@ export const ThemeToggle = () => {
         <div>
             <button
                 className={cn(
-                    "flex items-center fixed right-4 top-4 justify-center size-9 rounded-full bg-[#f5f5f4] cursor-pointer",
+                    "flex items-center fixed right-4 top-4 justify-center size-9 rounded-full bg-[#f5f5f4] cursor-pointer active:scale-95 transition-all duration-200 ease-out",
                     "dark:bg-[#121212] dark:border dark:border-neutral-600",
                 )}
                 onClick={() => {
