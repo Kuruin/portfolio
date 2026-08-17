@@ -11,8 +11,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Manavjit Singh | Full Stack Developer",
-  description: "Just a chill guy",
+  title: "Manavjit Singh",
+  description: "Full-stack web developer and open source contributor. Explore my work and projects.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
