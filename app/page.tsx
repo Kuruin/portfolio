@@ -124,8 +124,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '0ms' }}
               >
@@ -167,11 +167,9 @@ export default function Home() {
                       ></path>{" "}
                     </g>
                   </svg>
-                  <div className={cn(
-                    "bg-green-100 h-4 flex items-center justify-center outline outline-dashed outline-green-600 rounded-full w-15 text-[12px] text-center text-green-600",
-                    "dark:bg-[#043927]/60 dark:text-[#cbbfa6] dark:outline-[#145a3a]"
-                  )}>
-                    Working
+                  <div className="flex items-center gap-1 rounded-md border-green-300 bg-green-500/10 px-2 py-1 text-xs">
+                    <div className="size-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <span>Working</span>
                   </div>
                 </div>
                 <span className={cn(
@@ -213,7 +211,7 @@ export default function Home() {
               <div
                 className={cn(
                   "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '50ms' }}
               >
@@ -295,7 +293,7 @@ export default function Home() {
               <div
                 className={cn(
                   "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '100ms' }}
               >
@@ -377,7 +375,7 @@ export default function Home() {
               <div
                 className={cn(
                   "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '150ms' }}
               >
@@ -459,7 +457,7 @@ export default function Home() {
               <div
                 className={cn(
                   "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '200ms' }}
               >
@@ -541,7 +539,7 @@ export default function Home() {
               <div
                 className={cn(
                   "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '250ms' }}
               >
@@ -620,7 +618,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
         {/* Footer */}
         <div className="mt-15">
           <span className={cn(
