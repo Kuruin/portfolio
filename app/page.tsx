@@ -53,7 +53,7 @@ export default function Home() {
             />
             <div>
               <h1 className={cn(
-                "text-2xl sm:text-xl font-medium text-neutral-900 tracking-tight leading-none",
+                "text-2xl sm:text-xl font-medium text-neutral-900",
                 "dark:text-primary"
               )}>
                 Manavjit Singh
@@ -73,7 +73,7 @@ export default function Home() {
           </p>
           <div className="mb-5">
             <p className={cn(
-              "tracking-[0.145em] text-neutral-500 text-[11px] font-semibold mb-3",
+              "tracking-[0.145em] text-neutral-500 text-md sm:text-[12px] mb-3",
               "dark:text-secondary"
             )}>
               NOW
@@ -115,17 +115,17 @@ export default function Home() {
         {/* Projects Sections */}
         <div>
           <h2 className={cn(
-            "text-neutral-500 text-[11px] tracking-[0.16em] font-semibold uppercase mb-4",
+            "text-neutral-500 text-[12px] tracking-[0.16em] uppercase mb-4",
             "dark:text-secondary"
           )}>
             Recent Projects
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '0ms' }}
               >
@@ -210,10 +210,10 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '50ms' }}
               >
@@ -292,10 +292,10 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '100ms' }}
               >
@@ -374,10 +374,10 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '150ms' }}
               >
@@ -456,10 +456,10 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '200ms' }}
               >
@@ -538,10 +538,10 @@ export default function Home() {
             </Link>
 
             <Link href="https://roadmap.sh" className="block no-underline">
-              <div 
+              <div
                 className={cn(
-                  "h-auto w-full bg-white/40 backdrop-blur-md group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200/40 hover:bg-white/60 hover:border-neutral-300/60 shadow-sm active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-white/2 dark:backdrop-blur-md dark:border-white/4 dark:hover:bg-white/5 dark:hover:border-white/8"
+                  "h-auto w-95 mx-auto sm:w-65 bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-stone-900 dark:border-stone-800 dark:hover:border-stone-700"
                 )}
                 style={{ animationDelay: '250ms' }}
               >
@@ -632,8 +632,8 @@ export default function Home() {
               id="footer-telegram-link"
               href="https://telegram.me/Kuruin"
               className={cn(
-                "underline underline-offset-4 decoration-neutral-300/70 hover:decoration-neutral-900 transition-all duration-200 ease-out cursor-pointer",
-                "dark:decoration-neutral-700 dark:hover:decoration-white dark:hover:text-white"
+                "underline underline-offset-3 hover:text-black cursor-pointer transition-colors duration-300",
+                "dark:hover:text-white"
               )}
             >
               Say hi.
