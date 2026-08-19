@@ -19,7 +19,7 @@ export const ThemeToggle = () => {
                 aria-label="theme-toggle"
                 className={cn(
                     "flex items-center fixed right-4 top-4 justify-center size-9 rounded-full bg-[#f5f5f4] cursor-pointer active:scale-95 transition-all duration-200 ease-out z-30",
-                    "dark:bg-[#121212] dark:border dark:border-neutral-600",
+                    "dark:bg-[#121212] dark:border dark:border-neutral-700",
                 )}
                 onClick={() => {
                     setOpen((o) => !o);

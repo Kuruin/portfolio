@@ -54,7 +54,7 @@ export default function Home() {
             />
             <div>
               <h1 className={cn(
-                "text-2xl sm:text-xl font-medium text-neutral-900",
+                "text-2xl sm:text-xl font-medium text-neutral-900 tracking-[-0.015em] leading-tight",
                 "dark:text-primary"
               )}>
                 Manavjit Singh
@@ -74,7 +74,7 @@ export default function Home() {
           </p>
           <div className="mb-5">
             <p className={cn(
-              "tracking-[0.145em] text-neutral-500 text-md sm:text-[12px] mb-3",
+              "text-[11px] font-semibold tracking-[0.145em] text-neutral-500 mb-3",
               "dark:text-secondary"
             )}>
               NOW
@@ -102,7 +102,7 @@ export default function Home() {
                   id={`social-link-${items.title.toLowerCase()}`}
                   href={items.link}
                   className={cn(
-                    "text-sm text-neutral-400 underline underline-offset-3 decoration-neutral-200 transition-all duration-150 ease-out hover:text-neutral-900 hover:underline hover:decoration-neutral-900 active:scale-95",
+                    "text-sm text-neutral-400 underline underline-offset-3 decoration-neutral-200 transition-[color,text-decoration-color,transform] duration-150 ease-out hover:text-neutral-900 hover:underline hover:decoration-neutral-900 active:scale-[0.97]",
                     "dark:text-dark-accent dark:hover:text-white dark:hover:decoration-white dark:decoration-dark-accent"
                   )}
                 >
@@ -116,8 +116,7 @@ export default function Home() {
         {/* Projects Sections */}
         <div>
           <h2 className={cn(
-            "text-neutral-500 text-[12px] tracking-[0.16em] uppercase mb-4",
-            "dark:text-secondary"
+            "text-neutral-500 dark:text-secondary text-[11px] font-semibold tracking-[0.16em] uppercase mb-4"
           )}>
             Recent Projects
           </h2>
@@ -125,8 +124,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '0ms' }}
               >
@@ -147,7 +146,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -211,8 +210,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '50ms' }}
               >
@@ -233,7 +232,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -293,8 +292,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '100ms' }}
               >
@@ -315,7 +314,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -375,8 +374,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '150ms' }}
               >
@@ -397,7 +396,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -457,8 +456,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '200ms' }}
               >
@@ -479,7 +478,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -539,8 +538,8 @@ export default function Home() {
             <Link href="https://roadmap.sh" className="block no-underline">
               <div
                 className={cn(
-                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border  border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-300 active:scale-[0.985] transition-all duration-300 ease-out animate-fade-in-up",
-                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-700"
+                  "h-auto w-95 mx-auto sm:w-65 bg-gray-200/40 sm:bg-[#f5f5f4]/60 group rounded-xl p-4 flex flex-col gap-2 border border-neutral-300/60 sm:border-neutral-200 hover:border-neutral-400 active:scale-[0.98] transition-[transform,border-color] duration-300 ease-out animate-fade-in-up",
+                  "dark:bg-[#16110d] dark:border-stone-800 dark:hover:border-stone-600"
                 )}
                 style={{ animationDelay: '250ms' }}
               >
@@ -561,7 +560,7 @@ export default function Home() {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={cn(
-                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 ease-out",
+                      "absolute right-0 size-4 stroke-neutral-300 group-hover:stroke-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-[transform,stroke] duration-200 ease-out",
                       "dark:stroke-stone-700 dark:group-hover:stroke-primary"
                     )}
                     aria-hidden="true"
@@ -620,7 +619,9 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-8 gap-3 flex flex-col">
-          <h1 className="text-secondary tracking-[0.16em] text-[12px] uppercase mb-3">Listening</h1>
+          <h2 className="text-secondary text-[11px] font-semibold tracking-[0.16em] uppercase mb-1">
+            Listening
+          </h2>
           <SpotifyCard />
         </div>
 
@@ -635,7 +636,7 @@ export default function Home() {
               id="footer-telegram-link"
               href="https://telegram.me/Kuruin"
               className={cn(
-                "underline underline-offset-3 hover:text-black cursor-pointer transition-colors duration-300",
+                "underline underline-offset-3 hover:text-black cursor-pointer transition-[color,text-decoration-color] duration-200 ease-out active:scale-[0.97]",
                 "dark:hover:text-white"
               )}
             >
