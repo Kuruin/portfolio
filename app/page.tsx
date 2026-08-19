@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CartoonCV } from "./components/cartoon-cv";
 import { ThemeToggle } from "./components/theme-toggle";
 import { cn } from "./lib/util";
+import { SpotifyCard } from "./components/spotify-card";
 
 const socialLinks = [
   {
@@ -618,6 +619,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <div className="mt-8 gap-3 flex flex-col">
+          <h1 className="text-secondary tracking-[0.16em] text-[12px] uppercase mb-3">Listening</h1>
+          <SpotifyCard />
+        </div>
+
         {/* Footer */}
         <div className="mt-15">
           <span className={cn(

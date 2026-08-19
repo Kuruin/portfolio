@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Spotify Refresh Token Setup
 
-A step-by-step guide to authenticating your Spotify account and obtaining a persistent `refresh_token` for Spotify integration.
+A guide to authenticating your Spotify account and obtaining a persistent `refresh_token` for Spotify integration. You can choose between the **Quick Method (Recommended)** or the **Manual Method (Alternative)**.
 
 ---
 
@@ -58,81 +58,104 @@ A step-by-step guide to authenticating your Spotify account and obtaining a pers
 
 ---
 
-### Step 2: Authenticate your account
+## Method A: Quick Method (Recommended)
+
+This method utilizes the built-in authorization routes in the codebase to automatically negotiate tokens in the browser.
+
+1. Add your Spotify credentials to your `.env.local` file:
+   ```env
+   SPOTIFY_CLIENT_ID=your_client_id
+   SPOTIFY_CLIENT_SECRET=your_client_secret
+   ```
+2. Start your local development server:
+   ```bash
+   npm run dev
+   ```
+3. Navigate to the authorization endpoint in your browser:
+   ```http
+   http://127.0.0.1:3000/api/spotify
+   ```
+4. Authorize the app on the Spotify login screen.
+5. You will be redirected to the callback endpoint, which will display the tokens directly as a JSON payload:
+   ```json
+   {
+     "success": true,
+     "tokens": {
+       "access_token": "BQDKxO...",
+       "token_type": "Bearer",
+       "expires_in": 3600,
+       "refresh_token": "AQAtxX...",
+       "scope": "user-read-currently-playing user-read-playback-state"
+     }
+   }
+   ```
+6. Copy the `refresh_token` value from the JSON payload and add it to `.env.local`:
+   ```env
+   SPOTIFY_REFRESH_TOKEN=your_refresh_token
+   ```
+
+---
+
+## Method B: Manual Method (Alternative)
+
+If you prefer to perform the OAuth handshake manually, follow these step-by-step instructions.
+
+<details>
+<summary>Show Manual Steps</summary>
+
+### Step 1: Authenticate in Browser
 
 Substitute `CLIENT_ID_HERE` with your actual **Client ID** and paste this URL into your browser:
 
 ```http
-https://accounts.spotify.com/authorize?client_id=CLIENT_ID_HERE&response_type=code&redirect_uri=http://127.0.0.1:3000/api/spotify/callback&scope=user-read-currently-playing
+https://accounts.spotify.com/authorize?client_id=CLIENT_ID_HERE&response_type=code&redirect_uri=http://127.0.0.1:3000/api/spotify/callback&scope=user-read-currently-playing%20user-read-playback-state
 ```
 
-Once you authorize the application, you will be redirected to your Redirect URI. The URL will contain a `code` query parameter:
+Once you authorize the application, you will be redirected to your Redirect URI. The URL will contain a `code` query parameter in the address bar:
 
 ```http
 http://localhost:3000/?code=AQBeA9SD7QbA9hUfv_TfmatYxT51CY87msMnOZmMbhf...
 ```
 
-> [!IMPORTANT]
-> Copy the value of the `code` parameter from the address bar. You will need this authorization code in Step 4.
+Copy the value of the `code` parameter.
 
----
-
-### Step 3: Base64 Encode your Credentials
-
-To communicate with Spotify's API, you need to base64 encode your client credentials in the format `client_id:client_secret`.
+### Step 2: Base64 Encode your Credentials
 
 1. Go to [Base64Encode.org](https://www.base64encode.org/).
 2. Input your credentials as `your_client_id:your_client_secret`.
 3. Click **Encode** and copy the resulting string.
 
-For example, encoding dummy credentials might result in:
+*(For practice, the dummy string `TkFBSCBCUk8gWU9VIFRIT1VHSFQgVEhJUyBJUyBBIFJFQUwgUFJPRFVDVElPTiBTRUNSRVQgTEVBSyBEQU1NTk5OTk4gISEh` decodes to: `NAAH BRO YOU THOUGHT THIS IS A REAL PRODUCTION SECRET LEAK DAMMNNNNN !!!`)*
 
-```text
-TkFBSCBCUk8gWU9VIFRIT1VHSFQgVEhJUyBJUyBBIFJFQUwgUFJPRFVDVElPTiBTRUNSRVQgTEVBSyBEQU1NTk5OTk4gISEh
-```
+### Step 3: Request Tokens via curl
 
-_(Decodes to: `NAAH BRO YOU THOUGHT THIS IS A REAL PRODUCTION SECRET LEAK DAMMNNNNN !!!` — try decoding it for practice!)_
-
----
-
-### Step 4: Request Refresh and Access Tokens
-
-Open your terminal and run the following `curl` command to request your tokens.
-
-> [!IMPORTANT]
-> Make sure the entire command is executed as a **single line** in your terminal. Replace `CHANGE_BASE64_HERE` with your Base64 encoded string from Step 3, and `CHANGE_CODE_HERE` with the authorization code from Step 2.
+Execute the following `curl` command as a **single line** in your terminal. Replace `CHANGE_BASE64_HERE` with your encoded credentials from Step 2, and `CHANGE_CODE_HERE` with the code from Step 1.
 
 ```bash
 curl -H "Authorization: Basic CHANGE_BASE64_HERE" -d grant_type=authorization_code -d code=CHANGE_CODE_HERE -d redirect_uri=http://127.0.0.1:3000/api/spotify/callback https://accounts.spotify.com/api/token
 ```
 
-#### Example Command:
-
-```bash
-curl -H "Authorization: Basic ZWFjY2I5N2Y2ZDBlNDA1ODk3YWRmMWRkODBiOTVjMDE6YTQxOTVjMmQwYTQyNDM2MDllNjk3ZTYwMmU3MGI3NjI=" -d grant_type=authorization_code -d code=AQBeA9SD7QbA9hUfv_TfmatYxT51CY87msMnOZmMbhf7ZaxfbvG7oKEsATOJBxDyFap0Aq6uftY0v4Hq1QSy3MgQBfAHhmrifty-62rfDRlFnd0AzXRBOMpoOSA6SNw_uTPp7AixAE5zosgiIIf7efhzf1QOJfLh1HUYi248z8jk1x2jjKG2YLvMyJuP0rjB5tP5UHjoFGBvKbULpchkF6yiJHnS -d redirect_uri=http://127.0.0.1:3000/api/spotify/callback https://accounts.spotify.com/api/token
-```
-
----
-
-### Step 5: Save your Tokens
-
-Upon running the command, you will receive a JSON payload containing your persistent `refresh_token`:
+You will receive a JSON payload containing the tokens:
 
 ```json
 {
-  "access_token": "BQDKxO7h1I1wA3esGK9zCFWn97XORJEPjwAHAEIxCnDXcmy9GbEuPacquwWvpiM4d33gJVHVOP9KUxY8AXkpXc-_zRFZBfneHM2vEeV1Fbfr-0Mw94oimlNf77dRiyxPpm4IUVNLloUWgYcfkAO0",
+  "access_token": "BQDKxO...",
   "token_type": "Bearer",
   "expires_in": 3600,
-  "refresh_token": "AQAtxXvnzRTt4c2-2_Av2WyJQKWxUW_hMVN6QNiqv2i8A2ZElVarmvdhqyc8Pf-Z5n827FTFxTpHq5E3kOsrlRWM3TuJWxjVQsW0icR0zo3BXRFLt2FB2Qfj-pFaZwY-qc8",
+  "refresh_token": "AQAtxX...",
   "scope": "user-read-currently-playing"
 }
 ```
 
 Add these values to your `.env.local` file:
-
 ```env
 SPOTIFY_CLIENT_ID=your_client_id
+SPOTIFY_CLIENT_SECRET=your_client_secret
 SPOTIFY_REFRESH_TOKEN=your_refresh_token
 ```
+
+</details>
+
+---
 
 Now you're ready to integrate Spotify API calls into your portfolio!

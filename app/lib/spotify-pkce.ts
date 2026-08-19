@@ -7,8 +7,7 @@
 
 import crypto from "node:crypto";
 
-let codeVerifier: string | null = null
-let codeChallenge: string | null = null
+
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID!
 const REDIRECT_URI = process.env.NEXT_PUBLIC_SPOTIFY_REDIRECT_URI || 'http://127.0.0.1:3000/api/spotify/callback'
@@ -34,28 +33,27 @@ function generateCodeChallenge(verifier: string): string {
     return base64URLEncode(sha256(verifier))
 }
 
-export function generateAuthUrl(): string {
+export function generateAuthUrl(): { authUrl: string; codeVerifier: string } {
     // Generate PKCE parameters
-    codeVerifier = generateCodeVerifier()
-    codeChallenge = generateCodeChallenge(codeVerifier)
+    const verifier = generateCodeVerifier()
+    const challenge = generateCodeChallenge(verifier)
 
     const params = new URLSearchParams({
         response_type: 'code',
         client_id: CLIENT_ID,
-        scope: 'user-read-currently-playing user-read-playback-state',
+        scope: 'user-read-currently-playing user-read-playback-state user-read-recently-played',
         redirect_uri: REDIRECT_URI,
         code_challenge_method: 'S256',
-        code_challenge: codeChallenge,
+        code_challenge: challenge,
     })
 
-    return `https://accounts.spotify.com/authorize?${params.toString()}`
+    return {
+        authUrl: `https://accounts.spotify.com/authorize?${params.toString()}`,
+        codeVerifier: verifier
+    }
 }
 
-export async function exchangeCodeForTokens(code: string) {
-    if (!codeVerifier) {
-        throw new Error('No code verifier available. Generate auth URL first.')
-    }
-
+export async function exchangeCodeForTokens(code: string, verifier: string) {
     const response = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
@@ -66,7 +64,7 @@ export async function exchangeCodeForTokens(code: string) {
             code,
             redirect_uri: REDIRECT_URI,
             client_id: CLIENT_ID,
-            code_verifier: codeVerifier,
+            code_verifier: verifier,
         }),
     })
 
